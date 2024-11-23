@@ -12,7 +12,7 @@ interface User {
 
 interface UserDetailProps {
   params: {
-    id: string;
+    id: number;
   };
 }
 
