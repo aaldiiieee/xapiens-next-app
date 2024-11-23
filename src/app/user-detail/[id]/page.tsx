@@ -10,13 +10,7 @@ interface User {
   avatar: string;
 }
 
-interface UserDetailProps {
-  params: {
-    id: number;
-  };
-}
-
-export default async function UserDetail({ params }: UserDetailProps) {
+export default async function UserDetail({ params }: { params: { id: string } }) {
   const { id } = await params;
 
   try {
