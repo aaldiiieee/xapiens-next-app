@@ -17,7 +17,7 @@ interface UserDetailProps {
 }
 
 export default async function UserDetail({ params }: UserDetailProps) {
-  const { id } = params;
+  const { id } = await params;
 
   try {
     const response = await callReqResAPI.get(`/users/${id}`);
