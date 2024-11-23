@@ -11,11 +11,11 @@ interface User {
 }
 
 interface UserDetailProps {
-  params: { id: string }; // `params` sudah unwrap, tipe tidak Promise
+  params: Promise<{ id: string }>;
 }
 
 export default async function UserDetail({ params }: UserDetailProps) {
-  const resolvedParams = await params; // Jika params adalah Promise
+  const resolvedParams = await params;
   const { id } = resolvedParams;
 
   try {
