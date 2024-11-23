@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import axios from "axios";
+import callReqResAPI from "@/app/api/callReqResAPI";
 
 interface User {
   id: number;
@@ -10,11 +10,16 @@ interface User {
   avatar: string;
 }
 
-export default async function UserDetail({ params }: { params: { id: string } }) {
-  const { id } = params;
+interface UserDetailProps {
+  params: { id: string }; // `params` sudah unwrap, tipe tidak Promise
+}
+
+export default async function UserDetail({ params }: UserDetailProps) {
+  const resolvedParams = await params; // Jika params adalah Promise
+  const { id } = resolvedParams;
 
   try {
-    const response = await axios.get(`https://reqres.in/api/users/${id}`);
+    const response = await callReqResAPI.get(`/users/${id}`);
     const user: User = response.data.data;
 
     return (
@@ -46,5 +51,6 @@ export default async function UserDetail({ params }: { params: { id: string } })
     );
   } catch (error) {
     console.error("Error fetching user detail:", error);
+    return <p>Error fetching user detail.</p>;
   }
 }
