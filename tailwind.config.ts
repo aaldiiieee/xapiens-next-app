@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        btn__submit: "var(--btn-submit)",
         foreground: "var(--foreground)",
       },
     },
