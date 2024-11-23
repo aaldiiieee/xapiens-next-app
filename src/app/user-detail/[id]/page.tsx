@@ -1,6 +1,6 @@
-import callReqResAPI from "@/app/api/callReqResAPI";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
 
 interface User {
   id: number;
@@ -11,10 +11,10 @@ interface User {
 }
 
 export default async function UserDetail({ params }: { params: { id: string } }) {
-  const { id } = await params;
+  const { id } = params;
 
   try {
-    const response = await callReqResAPI.get(`/users/${id}`);
+    const response = await axios.get(`https://reqres.in/api/users/${id}`);
     const user: User = response.data.data;
 
     return (
