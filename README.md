@@ -6,13 +6,18 @@ This project is a Next.js application featuring user authentication with **NextA
 
 - **Google OAuth Login** for seamless user authentication.
 - **Custom Credentials Login** to authenticate with email and password.
+  - Sample Credentials:
+    
+    - Email: `eve.holt@reqres.in`
+    - Password: `cityslicka`
+  
 - Protected routes using middleware.
 - Modular and reusable components for UI forms.
 - Session handling with NextAuth.js, supporting token-based authentication.
 - **User List and Detail Pages**:
   - Responsive datatable for displaying user lists.
   - Dynamic user detail page fetching data from `https://reqres.in`.
-
+    
 ---
 
 ## Tech Stack
