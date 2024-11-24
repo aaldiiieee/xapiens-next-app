@@ -4,6 +4,9 @@ const nextConfig = {
       {
         hostname: "reqres.in",
       },
+      {
+        hostname: "lh3.googleusercontent.com",
+      },
     ],
   },
 };

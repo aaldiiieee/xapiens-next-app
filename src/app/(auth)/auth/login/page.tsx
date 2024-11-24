@@ -48,13 +48,17 @@ const LoginPage: React.FC = () => {
           <InputForm type="password" id="password" name="password" required />
         </div>
 
-        <ButtonSubmit text="Login" type="submit" className="btn__submit text-white mb-3" />
+        <ButtonSubmit
+          text="Login"
+          type="submit"
+          className="btn__submit text-white mb-3 hover:translate-y-1 hover:translate-x-1 transition-all"
+        />
 
         <ButtonSubmit
           text="Sign in with Google"
           type="button"
           onClick={() => signIn("google", { callbackUrl: "/" })}
-          className="border border-[rgba(0,0,0,0.25)] shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] hover:shadow-none"
+          className="border border-black shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-y-1 hover:translate-x-1 transition-all"
         />
 
         {error && <p className="text-red-500 mt-4">{error}</p>}
