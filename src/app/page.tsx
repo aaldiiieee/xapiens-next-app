@@ -85,28 +85,28 @@ const UsersPage: React.FC = () => {
                     <td className="p-3">{`${user.first_name} ${user.last_name}`}</td>
                     <td className="p-3">{user.email}</td>
                     <td className="p-3">
-                      <Link href={`/user-detail/${user.id}`}>View Details</Link>
+                      <Link href={`/user-detail/${user.id}`} className="btn__submit text-white text-sm">View</Link>
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            {/* Pagination Controls */}
-            <div className="flex justify-between items-center mt-4">
+
+            <div className="flex justify-end items-center mt-4">
               <button
                 onClick={handlePreviousPage}
                 disabled={page === 1}
-                className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
+                className="px-4 py-2 text-sm text-black rounded disabled:text-gray-400"
               >
-                Previous
+                Prev
               </button>
-              <span className="text-gray-700">
+              <span className="text-gray-700 text-sm">
                 Page {page} of {totalPages}
               </span>
               <button
                 onClick={handleNextPage}
                 disabled={page === totalPages}
-                className="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50"
+                className="px-4 text-sm py-2 text-black rounded disabled:text-gray-400"
               >
                 Next
               </button>
