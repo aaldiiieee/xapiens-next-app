@@ -51,7 +51,7 @@ const UsersPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg w-full shadow-[#000_8px_8px_0px_0px] overflow-auto">
+    <div className="bg-white p-6 rounded-lg w-full shadow-[#000_8px_8px_0px_0px] overflow-auto border-2 border-black">
       <div className="shadow-[#000_6px_6px_0px_0px] rounded p-4 inline-block mb-4 border border-black">
         <h1 className="text-2xl font-bold">User List</h1>
       </div>

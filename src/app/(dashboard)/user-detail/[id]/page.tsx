@@ -23,7 +23,7 @@ export default async function UserDetail({ params }: UserDetailProps) {
     const user: User = response.data.data;
 
     return (
-      <div className="bg-white p-6 rounded-lg shadow-[#000_6px_6px_0px_0px] w-full">
+      <div className="bg-white p-6 rounded-lg shadow-[#000_6px_6px_0px_0px] w-full border-2 border-black">
         <div className="flex items-center gap-10 mb-6">
           <Image
             src={user.avatar}
