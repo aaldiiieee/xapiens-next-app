@@ -1,13 +1,14 @@
 interface ButtonSubmitProps {
   text: string;
   type: "submit" | "reset" | "button";
+  className?: string;
   onClick?: () => void;
 }
 
-const ButtonSubmit = ({ text, type, onClick }: ButtonSubmitProps) => {
+const ButtonSubmit = ({ text, type, className, onClick }: ButtonSubmitProps) => {
   return (
     <button
-      className="btn__submit text-white font-bold py-2 px-4 rounded"
+      className={`font-medium w-full py-2 px-4 rounded ${className}`}
       type={type}
       onClick={onClick}
     >
